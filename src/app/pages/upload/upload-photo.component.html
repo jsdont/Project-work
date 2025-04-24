@@ -1,0 +1,26 @@
+<div class="upload-container">
+  <h2>Uploading photo</h2>
+
+  <input type="file" (change)="onFileSelected($event)">
+  <div *ngIf="previewUrl" class="preview-box">
+    <img [src]="previewUrl" class="preview-img">
+  </div>
+
+  <label>Quest:</label>
+  <select [(ngModel)]="selectedQuest">
+    <option *ngFor="let quest of quests" [value]="quest.id">{{ quest.title }}</option>
+  </select>
+
+  <label>Grade:</label>
+  <div class="stars">
+    <span *ngFor="let s of [1,2,3,4,5]" (click)="setRating(s)">
+      <i [class.filled]="rating >= s">★</i>
+    </span>
+  </div>
+
+  <button (click)="uploadPhoto()">Send photo</button>
+
+  <div *ngIf="uploadSuccess" class="success-message">
+    ✅ Image sent successfully!
+  </div>
+</div>

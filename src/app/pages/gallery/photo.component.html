@@ -1,0 +1,9 @@
+<div class="gallery">
+  <h2>Gallery</h2>
+  <div class="photo-grid">
+    <div class="photo-card" *ngFor="let photo of photos">
+      <img [src]="photo.photo" alt="Uploaded Photo" class="photo-img">
+      <p>{{ photo.comment }}</p>
+    </div>
+  </div>
+</div>
