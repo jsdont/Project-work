@@ -40,7 +40,7 @@ class SubmissionViewSet(viewsets.ModelViewSet):
     def perform_create(self, serializer):
         serializer.save(user=self.request.user)  # ⬅️ ВАЖНО!!!
 
-    # ✅ Аппрув (утверждение)
+
     @action(detail=True, methods=['patch'], permission_classes=[IsAdminOrModerator])
     def approve(self, request, pk=None):
         submission = self.get_object()
@@ -48,7 +48,7 @@ class SubmissionViewSet(viewsets.ModelViewSet):
         submission.save()
         return Response({'status': 'approved'}, status=status.HTTP_200_OK)
 
-    # ❌ Отклонить (reject)
+
     @action(detail=True, methods=['patch'], permission_classes=[IsAdminOrModerator])
     def reject(self, request, pk=None):
         submission = self.get_object()
@@ -56,7 +56,7 @@ class SubmissionViewSet(viewsets.ModelViewSet):
         submission.save()
         return Response({'status': 'rejected'}, status=status.HTTP_200_OK)
 
-    # ⭐ Выставить оценку
+
     @action(detail=True, methods=['patch'], permission_classes=[IsAdminOrModerator])
     def rate(self, request, pk=None):
         submission = self.get_object()
