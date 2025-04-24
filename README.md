@@ -1,27 +1,36 @@
-# PhotoquestFinal
+# 📸 Photo Quest
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.16.
+## 📌 Project Overview
+Photo Quest is an interactive platform where users participate in photo quests, complete tasks and upload photos.
+Tasks may include taking pictures of objects, scenic or thematic shots in specific locations.
+Administrators can create new quests, moderate content and track user activity.
 
-## Development server
+## 👥 Team Members
+- Aibek Sayat – Frontend Developer  
+- Kenzhiyeva Nazerke – Backend Developer  
+- Zhumabek Daniyal – UI/UX Designer / Fullstack Developer  
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## 🛠️ Stack Technologies
+### Backend:
+- Django / FastAPI  
+- Python  
+- PostgreSQL  
 
-## Code scaffolding
+### Frontend:
+- Angular  
+- TypeScript  
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## 🎯 Features
+### Front-End:
+- 📜 **Page with a list of quests** with filtering by category and difficulty.
+- 🔍 **Detailed quest page** with description, conditions and examples of completed work.
+- 📝 **User registration and authentication** (JWT-based login).
+- 📤 **Uploading completed tasks** with the ability to comment and rate.
+- 🚀 **Routing between pages** (list of quests, profile, uploaded photos).
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### Back-End:
+- 🏆 **Models:** `User`, `Quest`, `Submission`, `Category`.
+- 🔗 **Associations:** `Quest` is associated with `Category`, `Submission` is associated with `User` and `Quest`.
+- 🎛️ **API for working with tasks:** adding new quests, moderating completed tasks.
+- 🔐 **Tokenized authentication** (JWT) for users and admins.
+>>>>>>> 337b024ec3e51234f632f4f0b08b4d62ee76db31
