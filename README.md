@@ -12,9 +12,8 @@ Administrators can create new quests, moderate content and track user activity.
 
 ## 🛠️ Stack Technologies
 ### Backend:
-- Django / FastAPI  
+- Django 
 - Python  
-- PostgreSQL  
 
 ### Frontend:
 - Angular  
